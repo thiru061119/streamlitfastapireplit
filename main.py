@@ -1,6 +1,11 @@
 from fastapi import FASTAPI
 import psycopg2
+from pydantic import BaseModel
 app=FASTAPI()
+
+class User(BaseModel):
+    name: str
+    age: int
 conn=psycopg2.connect(host='https://mjxobygptnklpkdktkjf.supabase.co',
                       database='postgres'.
                       user='postgres',
@@ -13,8 +18,9 @@ def root():
     return {"message": "FastAPI running on Replit"}
 
 @app.post("/users")
-def create_user(name:str,age:int):
-  cursor.execute(insert into users (name,age) values (%s, %s),(name,age))
+#def create_user(name:str,age:int):
+def create_user(user:User)
+  cursor.execute(insert into users (name,age) values (%s, %s),(user.name,user.age))
   conn.commit
   return {'message':'User Saved'}
 @app.get("/userdata")
