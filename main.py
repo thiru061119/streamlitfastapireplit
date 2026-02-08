@@ -14,7 +14,7 @@ conn=psycopg2.connect(host='mjxobygptnklpkdktkjf.supabase.co',
                       port=5432)
 cursor = conn.cursor()
 
-@app.get("/")
+@app.get("/test")
 def root():
     return {"message": "FastAPI running on Replit"}
 
