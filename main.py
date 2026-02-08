@@ -6,7 +6,8 @@ app=FASTAPI()
 class User(BaseModel):
     name: str
     age: int
-conn=psycopg2.connect(host='https://mjxobygptnklpkdktkjf.supabase.co',
+    #mjxobygptnklpkdktkjf
+conn=psycopg2.connect(host='mjxobygptnklpkdktkjf.supabase.co',
                       database='postgres'.
                       user='postgres',
                       password='IEq3UmvSo6sYfF5k',
