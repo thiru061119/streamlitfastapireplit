@@ -12,6 +12,7 @@ with st.form("user_form"):
 
 if submit:
     if name:
+        #https://streamlitfastapireplit--thirug.replit.app/users?name=Thirvanamalai&age=95
         res = requests.post(
             f"{API_URL}/users",
             params={"name": name, "age": age}
