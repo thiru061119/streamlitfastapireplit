@@ -1,6 +1,7 @@
 import streamlit as st
 import requests
 API_URL = "https://your-fastapi-url"
+API_URL='https://74917775-538a-4366-8eb0-56467d935da2-00-1yxp9rkhvs03m.kirk.replit.dev/'
 st.title("User Form")
 
 with st.form("user_form"):
