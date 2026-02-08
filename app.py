@@ -21,6 +21,6 @@ if submit:
             st.error("Backend error ❌")
     else:
       st.error("Name is required")
-  if st.button("Load users"):
+if st.button("Load users"):
     data = requests.get(f"{API_URL}/users").json()
     st.table(data)
