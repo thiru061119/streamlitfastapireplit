@@ -2,7 +2,7 @@ from fastapi import FASTAPI
 import psycopg2
 app=FASTAPI()
 conn=psycopg2.connect(host='https://mjxobygptnklpkdktkjf.supabase.co',
-                      database='streamlit-fastapi-demo'.
+                      database='postgres'.
                       user='postgres',
                       password='IEq3UmvSo6sYfF5k',
                       port=5432)
