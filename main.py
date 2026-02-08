@@ -7,6 +7,11 @@ conn=psycopg2.connect(host='https://mjxobygptnklpkdktkjf.supabase.co',
                       password='IEq3UmvSo6sYfF5k',
                       port=5432)
 cursor = conn.cursor()
+
+@app.get("/")
+def root():
+    return {"message": "FastAPI running on Replit"}
+
 @app.post("/users")
 def create_user(name:str,age:int):
   cursor.execute(insert into users (name,age) values (%s, %s),(name,age))
