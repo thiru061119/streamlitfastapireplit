@@ -1,6 +1,6 @@
 import streamlit as st
 import requests
-API_URL = "https://your-fastapi-url"
+#API_URL = "https://your-fastapi-url"
 #API_URL='https://74917775-538a-4366-8eb0-56467d935da2-00-1yxp9rkhvs03m.kirk.replit.dev/'
 
 API_URL='https://74917775-538a-4366-8eb0-56467d935da2-00-1yxp9rkhvs03m.kirk.replit.dev/'
@@ -16,14 +16,22 @@ with st.form("user_form"):
 if submit:
     if name:
         #https://streamlitfastapireplit--thirug.replit.app/users?name=Thirvanamalai&age=95
+        payload = {
+                "name": name,   # e.g. "Gurusamy"
+                "age": age      # e.g. 80 (must be int)
+            }
         res = requests.post(
             f"{API_URL}/users",
-            params={"name": name, "age": age}
+            headers={
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+            },
+            json=payload
         )
+        print(res.status_code)
         if res.status_code == 200:
             st.success("Saved to Supabase ✅")
-        else:
-            st.success(res)
+        else:            
             st.error("Backend error ❌")
     else:
       st.error("Name is required")
