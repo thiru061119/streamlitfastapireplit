@@ -33,7 +33,7 @@ def get_users():
   #cursor.execute("select name,age from users")
   response = (supabase.table("users").select("*").execute())  
   #return [response.json()]
-  return [response]
+  return [response.json()]
   
 
 
