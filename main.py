@@ -1,8 +1,8 @@
-from fastapi import FASTAPI
+from fastapi import FastAPI
 import psycopg2
 from pydantic import BaseModel
 import os
-app=FASTAPI()
+app=FastAPI()
 #host='mjxobygptnklpkdktkjf.supabase.co',
 class User(BaseModel):
     name: str
