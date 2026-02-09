@@ -23,8 +23,8 @@ if submit:
         if res.status_code == 200:
             st.success("Saved to Supabase ✅")
         else:
-           
-            st.error(res,"Backend error ❌")
+            st.success(res)
+            st.error("Backend error ❌")
     else:
       st.error("Name is required")
 if st.button("Load users"):
