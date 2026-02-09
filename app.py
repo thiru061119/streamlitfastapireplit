@@ -5,6 +5,7 @@ API_URL = "https://your-fastapi-url"
 
 API_URL='https://74917775-538a-4366-8eb0-56467d935da2-00-1yxp9rkhvs03m.kirk.replit.dev/'
 #API_URL='https://streamlitfastapireplit--ThiruG.replit.app'
+API_URL='https://streamlitfastapireplit-4.onrender.com'
 st.title("User Form")
 
 with st.form("user_form"):
@@ -26,5 +27,5 @@ if submit:
     else:
       st.error("Name is required")
 if st.button("Load users"):
-    data = requests.get(f"{API_URL}/users").json()
+    data = requests.get(f"{API_URL}/userdata").json()
     st.table(data)
