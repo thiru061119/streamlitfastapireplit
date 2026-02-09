@@ -10,7 +10,7 @@ class User(BaseModel):
     #mjxobygptnklpkdktkjf
 conn=psycopg2.connect(
                       host='mjxobygptnklpkdktkjf.supabase.co',
-                      database='postgres'.
+                      database='postgres',
                       user='postgres',
                       password='IEq3UmvSo6sYfF5k',
                       port=5432)
