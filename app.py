@@ -38,4 +38,4 @@ if submit:
 if st.button("Load users"):
    # data = requests.get(f"{API_URL}/userdata").json()
     data = requests.get(f"{API_URL}/userdata")
-    st.table(data)
+    st.table(data.json())
