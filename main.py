@@ -23,7 +23,7 @@ def root():
 @app.post("/users")
 #def create_user(name:str,age:int):
 def create_user(user:User):
-  cursor.execute(insert into users (name,age) values (%s, %s),(user.name,user.age))
+  cursor.execute('insert into users (name,age) values (%s, %s)',(user.name,user.age))
   conn.commit
   return {'message':'User Saved'}
 @app.get("/userdata")
