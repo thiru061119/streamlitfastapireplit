@@ -9,7 +9,7 @@ class User(BaseModel):
     age: int
     #mjxobygptnklpkdktkjf
 conn=psycopg2.connect(                     
-                      host='db.mjxobygptnklpkdktkjf.supabase.co'
+                      host='db.mjxobygptnklpkdktkjf.supabase.co',
                       database='postgres',
                       user='postgres',
                       password='IEq3UmvSo6sYfF5k',
