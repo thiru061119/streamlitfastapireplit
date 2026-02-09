@@ -31,8 +31,9 @@ def create_user(user:User):
 @app.get("/userdata")
 def get_users():
   #cursor.execute("select name,age from users")
-  response = (supabase.table("users").select("*").execute())    
-  return [response.json()]
+  response = (supabase.table("users").select("*").execute())  
+  #return [response.json()]
+  return [response]
   
 
 
