@@ -8,7 +8,7 @@ class User(BaseModel):
     name: str
     age: int
     #mjxobygptnklpkdktkjf
-conn=psycopg2.connect(host='db.mjxobygptnklpkdktkjf.supabase.co',database='postgres',user='postgres',password='IEq3UmvSo6sYfF5k',port=5432)
+conn=psycopg2.connect(host='db.mjxobygptnklpkdktkjf.supabase.co',database='postgres',user='postgres',password='IEq3UmvSo6sYfF5k',port=5432,sslmode="require")
 cursor = conn.cursor()
 
 @app.get("/test")
