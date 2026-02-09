@@ -36,5 +36,6 @@ if submit:
     else:
       st.error("Name is required")
 if st.button("Load users"):
-    data = requests.get(f"{API_URL}/userdata").json()
+   # data = requests.get(f"{API_URL}/userdata").json()
+    data = requests.get(f"{API_URL}/userdata")
     st.table(data)
