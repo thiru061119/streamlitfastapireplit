@@ -1,13 +1,15 @@
 from fastapi import FASTAPI
 import psycopg2
 from pydantic import BaseModel
+import os
 app=FASTAPI()
-
+#host='mjxobygptnklpkdktkjf.supabase.co',
 class User(BaseModel):
     name: str
     age: int
     #mjxobygptnklpkdktkjf
-conn=psycopg2.connect(host='mjxobygptnklpkdktkjf.supabase.co',
+conn=psycopg2.connect(
+                      host='mjxobygptnklpkdktkjf.supabase.co',
                       database='postgres'.
                       user='postgres',
                       password='IEq3UmvSo6sYfF5k',
