@@ -28,7 +28,7 @@ def create_user(user:User)
 def get_users():
   cursor.execute("select name,age from users")
   rows=cursor.fetchall()
-  return [{'name": r[0], 'age": r[1]} for r in rows]
+  return [{'name': r[0], 'age': r[1]} for r in rows]
   
 
 
